@@ -1,0 +1,111 @@
+@prefix e: <http://www.fa.ru/entity/> .
+@prefix p: <http://www.fa.ru/prop/> .
+@prefix pd: <http://www.fa.ru/prop/direct/> .
+@prefix pq: <http://www.fa.ru/prop/qualifier/> .
+@prefix ps: <http://www.fa.ru/prop/statement/> .
+@prefix s: <http://www.fa.ru/entity/statement/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+e:BaumanMoscowStateTechnicalUniversity pd:IsA e:University ;
+    pd:city e:Moscow ;
+    pd:established "1830-07-01"^^xsd:date ;
+    pd:motto "«'''М'''ужество, '''В'''оля, '''Т'''руд, '''У'''порство!»<br />\"Courage, will, labor, perseverance!\""@en ;
+    pd:rector e:Anatoly_Aleksandrov ;
+    p:studentSize s:8c709248-9ab1-4639-939a-7adae8c2432c,
+        s:b1,
+        s:b2,
+        s:f7af5de0-fa03-48e7-9437-3198f21e36ad .
+
+e:MoscowStateUniversity pd:IsA e:University ;
+    pd:city e:Moscow ;
+    pd:established "1755-01-25"^^xsd:date ;
+    pd:motto "Наука есть ясное познание истины, просвещение разума"@ru ;
+    pd:rector e:Viktor_Sadovnichiy ;
+    p:staffSize s:8d5286fa-ab9e-49cd-81c5-e0d286304d6f,
+        s:d08d0d99-9975-4228-82e4-b96f8e395f37 ;
+    p:studentSize s:953b046c-0264-4914-a374-6a10dddb72ca,
+        s:a1,
+        s:a2,
+        s:a22d20b2-ede3-4847-be16-17d74d9ae86e,
+        s:a3 .
+
+e:SaintPetersburgStateUniversity pd:IsA e:University ;
+    pd:city e:Saint_Petersburg ;
+    pd:established "1724-01-28"^^xsd:date ;
+    pd:motto "''Hic tuta perennat'' ([[Latin]])"@en ;
+    pd:rector e:Nikolay_Kropachev ;
+    p:studentSize s:c1,
+        s:c2,
+        s:c3,
+        s:c4 .
+
+e:SpbPolytechnicUniversity pd:IsA e:University ;
+    pd:city e:Saint_Petersburg ;
+    pd:established "1899-10-19"^^xsd:date ;
+    pd:rector e:Andrey_Rudskoy ;
+    p:studentSize s:9e28d769-cc5a-4750-a051-2840d980a13d,
+        s:c8b7b822-2dec-47dc-940c-950cb9315c11,
+        s:d1,
+        s:d2,
+        s:d3 .
+
+s:8c709248-9ab1-4639-939a-7adae8c2432c pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 19000 .
+
+s:8d5286fa-ab9e-49cd-81c5-e0d286304d6f pq:atYear "2024"^^xsd:gYear ;
+    ps:staffSize 5000 .
+
+s:953b046c-0264-4914-a374-6a10dddb72ca pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 39282 .
+
+s:9e28d769-cc5a-4750-a051-2840d980a13d pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 32250 .
+
+s:a1 pq:atYear "2000"^^xsd:gYear ;
+    ps:studentSize 40000 .
+
+s:a2 pq:atYear "2010"^^xsd:gYear ;
+    ps:studentSize 38000 .
+
+s:a22d20b2-ede3-4847-be16-17d74d9ae86e pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 39282 .
+
+s:a3 pq:atYear "2020"^^xsd:gYear ;
+    ps:studentSize 42000 .
+
+s:b1 pq:atYear "2005"^^xsd:gYear ;
+    ps:studentSize 19000 .
+
+s:b2 pq:atYear "2015"^^xsd:gYear ;
+    ps:studentSize 21000 .
+
+s:c1 pq:atYear "1995"^^xsd:gYear ;
+    ps:studentSize 28000 .
+
+s:c2 pq:atYear "2000"^^xsd:gYear ;
+    ps:studentSize 30000 .
+
+s:c3 pq:atYear "2010"^^xsd:gYear ;
+    ps:studentSize 32000 .
+
+s:c4 pq:atYear "2020"^^xsd:gYear ;
+    ps:studentSize 30000 .
+
+s:c8b7b822-2dec-47dc-940c-950cb9315c11 pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 32250 .
+
+s:d08d0d99-9975-4228-82e4-b96f8e395f37 pq:atYear "2024"^^xsd:gYear ;
+    ps:staffSize 5000 .
+
+s:d1 pq:atYear "2000"^^xsd:gYear ;
+    ps:studentSize 25000 .
+
+s:d2 pq:atYear "2010"^^xsd:gYear ;
+    ps:studentSize 28000 .
+
+s:d3 pq:atYear "2020"^^xsd:gYear ;
+    ps:studentSize 33000 .
+
+s:f7af5de0-fa03-48e7-9437-3198f21e36ad pq:atYear "2024"^^xsd:gYear ;
+    ps:studentSize 19000 .
+

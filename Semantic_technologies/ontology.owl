@@ -1,0 +1,24 @@
+# Содержимое для ontology.owl
+@prefix onto: <http://unifiedschema.org/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://unifiedschema.org/schema> a owl:Ontology .
+
+# Класс
+onto:ProgrammingLanguage a owl:Class ;
+    rdfs:label "Programming Language"@en .
+
+# Свойства
+onto:name a owl:DatatypeProperty ;
+    rdfs:label "name"@en .
+onto:creator a owl:DatatypeProperty ;
+    rdfs:label "creator"@en .
+onto:releaseYear a owl:DatatypeProperty ;
+    rdfs:label "release year"@en .
+onto:latestVersion a owl:DatatypeProperty ;
+    rdfs:label "latest version"@en .
+onto:paradigm a owl:DatatypeProperty ;
+    rdfs:label "paradigm"@en .
+onto:isPopular a owl:DatatypeProperty ;
+    rdfs:label "is popular"@en .

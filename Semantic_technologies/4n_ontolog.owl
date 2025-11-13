@@ -1,0 +1,46 @@
+@prefix : <http://example.org/university-owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:University a owl:Class ;
+    rdfs:label "Университет"@ru .
+
+:City a owl:Class ;
+    rdfs:label "Город"@ru .
+
+:Person a owl:Class ;
+    rdfs:label "Человек"@ru .
+
+:locatedIn a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "Расположен в"@ru ;
+    rdfs:domain :University ;
+    rdfs:range :City .
+
+:rector a owl:ObjectProperty ;
+    rdfs:label "Ректор"@ru ;
+    rdfs:domain :University ;
+    rdfs:range :Person .
+
+:fullName a owl:DatatypeProperty ;
+    rdfs:label "ФИО"@ru ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:established a owl:DatatypeProperty ;
+    rdfs:label "Дата основания"@ru ;
+    rdfs:domain :University ;
+    rdfs:range xsd:date .
+
+:dateOfBirth a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "Дата рождения"@ru ;
+    rdfs:domain :Person ;
+    rdfs:range [
+        a rdfs:Datatype ;
+        owl:onDatatype xsd:date ;
+        owl:withRestrictions (
+            [ xsd:minInclusive "1900-01-01"^^xsd:date ]
+            [ xsd:maxInclusive "2000-01-01"^^xsd:date ]
+        )
+    ] .

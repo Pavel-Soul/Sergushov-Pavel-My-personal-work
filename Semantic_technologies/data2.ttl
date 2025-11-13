@@ -1,0 +1,52 @@
+@prefix res2: <http://resource2.org/schema#> .
+@prefix onto: <http://unifiedschema.org/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+res2:PythonLang 
+    a res2:language ;
+    res2:langName "Python" ;
+    res2:inventor "Guido van Rossum" ;
+    res2:yearReleased 1991 ;
+    res2:paradigmUsed "Object-Oriented, Procedural" ;
+    res2:currentVersion "3.9.5" ;
+    res2:isPopular true .
+
+res2:JS 
+    a res2:language ;
+    res2:langName "JavaScript" ;
+    res2:inventor "Brendan Eich" ;
+    res2:yearReleased 1995 ;
+    res2:paradigmUsed "Event-Driven, Functional" ;
+    res2:currentVersion "ES2022" ;
+    res2:isPopular true .
+
+res2:Kotlin 
+    a res2:language ;
+    res2:langName "Kotlin" ;
+    res2:inventor "JetBrains" ;
+    res2:yearReleased 2011 ;
+    res2:paradigmUsed "Object-Oriented, Functional" ;
+    res2:currentVersion "1.5.0" ;
+    res2:isPopular true .
+
+res2:RubyLang 
+    a res2:language ;
+    res2:langName "Ruby" ;
+    res2:inventor "Yukihiro Matsumoto" ;
+    res2:yearReleased 1995 ;
+    res2:paradigmUsed "Object-Oriented, Functional" ;
+    res2:currentVersion "3.0.1" ;
+    res2:isPopular false .
+
+
+
+# Mapping properties from Resource 2 to the unified ontology
+res2:langName owl:equivalentProperty onto:name .
+res2:inventor owl:equivalentProperty onto:creator .
+res2:yearReleased owl:equivalentProperty onto:releaseYear .
+res2:paradigmUsed owl:equivalentProperty onto:paradigm .
+res2:currentVersion owl:equivalentProperty onto:latestVersion .
+res2:isPopular owl:equivalentProperty onto:isPopular .

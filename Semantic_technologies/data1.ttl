@@ -1,0 +1,43 @@
+@prefix res1: <http://resource1.org/schema#> .
+@prefix onto: <http://unifiedschema.org/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+res1:Python 
+    a res1:programmingLanguage ;
+    res1:name "Python" ;
+    res1:creator "Guido van Rossum" ;
+    res1:releaseYear 1991 ;
+    res1:latestVersion "3.9.5" .
+
+res1:JavaScript 
+    a res1:programmingLanguage ;
+    res1:name "JavaScript" ;
+    res1:creator "Brendan Eich" ;
+    res1:releaseYear 1995 ;
+    res1:latestVersion "ES2022" .
+
+res1:Java 
+    a res1:programmingLanguage ;
+    res1:name "Java" ;
+    res1:creator "James Gosling" ;
+    res1:releaseYear 1995 ;
+    res1:latestVersion "17" .
+
+res1:CSharp 
+    a res1:programmingLanguage ;
+    res1:name "C#" ;
+    res1:creator "Microsoft" ;
+    res1:releaseYear 2000 ;
+    res1:latestVersion "9.0" .
+
+res1:Ruby 
+    a res1:programmingLanguage ;
+    res1:name "Ruby" ;
+    res1:creator "Yukihiro Matsumoto" ;
+    res1:releaseYear 1995 ;
+    res1:latestVersion "3.0.1" .
+
+

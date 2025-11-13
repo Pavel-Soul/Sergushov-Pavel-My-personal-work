@@ -1,0 +1,27 @@
+# Содержимое для extra.ttl
+@prefix onto: <http://unifiedschema.org/schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix res1: <http://resource1.org/schema#> .
+@prefix res2: <http://resource2.org/schema#> .
+
+# Эквивалентность классов
+res1:programmingLanguage owl:equivalentClass onto:ProgrammingLanguage .
+res2:language owl:equivalentClass onto:ProgrammingLanguage .
+
+# Эквивалентность свойств
+res1:name owl:equivalentProperty onto:name .
+res1:creator owl:equivalentProperty onto:creator .
+res1:releaseYear owl:equivalentProperty onto:releaseYear .
+res1:latestVersion owl:equivalentProperty onto:latestVersion .
+
+res2:langName owl:equivalentProperty onto:name .
+res2:inventor owl:equivalentProperty onto:creator .
+res2:yearReleased owl:equivalentProperty onto:releaseYear .
+res2:currentVersion owl:equivalentProperty onto:latestVersion .
+res2:paradigmUsed owl:equivalentProperty onto:paradigm .
+res2:isPopular owl:equivalentProperty onto:isPopular .
+
+# Эквивалентность экземпляров (самое важное для объединения)
+res1:Python owl:sameAs res2:PythonLang .
+res1:JavaScript owl:sameAs res2:JS .
+res1:Ruby owl:sameAs res2:RubyLang .
