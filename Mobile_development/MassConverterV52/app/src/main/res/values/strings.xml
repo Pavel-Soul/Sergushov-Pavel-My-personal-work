@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MassConverterV5</string>
+
+    <string-array name="mass_units">
+        <item>Караты</item>
+        <item>Граммы</item>
+        <item>Килограммы</item>
+        <item>Центнеры</item>
+        <item>Тонны</item>
+        <item>Фунты</item>
+        <item>Унции</item>
+    </string-array>
+</resources>
