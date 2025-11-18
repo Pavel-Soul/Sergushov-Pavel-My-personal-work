@@ -1,0 +1,26 @@
+
+@prefix : <http://fa.ru/work#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Определение классов
+:Person rdf:type owl:Class .
+
+# Определение свойств
+:knows rdf:type owl:ObjectProperty ;
+       rdf:type owl:SymmetricProperty .
+
+:isAncestorOf rdf:type owl:ObjectProperty ;
+             rdf:type owl:TransitiveProperty .
+
+# Индивиды
+:Alice rdf:type :Person .
+:Bob rdf:type :Person .
+:Charlie rdf:type :Person .
+:David rdf:type :Person .
+
+# Отношения
+:Alice :knows :Bob .
+:Bob :isAncestorOf :Charlie .
+:Charlie :isAncestorOf :David .

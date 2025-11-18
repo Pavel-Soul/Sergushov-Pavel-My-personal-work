@@ -1,0 +1,24 @@
+@prefix : <http://fa.ru/work#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:isAncestorOf a owl:ObjectProperty,
+        owl:TransitiveProperty .
+
+:knows a owl:ObjectProperty,
+        owl:SymmetricProperty .
+
+:Alice a :Person ;
+    :knows :Bob .
+
+:Bob a :Person ;
+    :isAncestorOf :Charlie,
+        :David ;
+    :knows :Alice .
+
+:Charlie a :Person ;
+    :isAncestorOf :David .
+
+:David a :Person .
+
+:Person a owl:Class .
+

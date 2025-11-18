@@ -1,0 +1,30 @@
+
+@prefix : <http://fa.ru/relationships#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Определение класса
+:Person rdf:type owl:Class .
+
+# Определение свойства
+:isManagerOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Person ;
+             rdfs:range :Person ;
+             rdf:type owl:AsymmetricProperty ;
+             rdf:type owl:IrreflexiveProperty .
+
+# Экземпляры
+:Alice rdf:type :Person .
+:Bob rdf:type :Person .
+:Charlie rdf:type :Person .
+:David rdf:type :Person .
+
+# Утверждения
+:Alice :isManagerOf :Bob .
+:Alice :isManagerOf :Adam .
+:Bob :isManagerOf :Alice .  
+:Bob :isManagerOf :Charlie .  
+:Adam :isManagerOf :Adam .  
+

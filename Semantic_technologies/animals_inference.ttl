@@ -1,0 +1,38 @@
+@prefix : <http://fa.ru/animals#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:Animal a rdfs:Class .
+
+:Mammal a rdfs:Class ;
+    rdfs:subClassOf :Animal .
+
+:Predator a rdfs:Class ;
+    rdfs:subClassOf :Animal .
+
+:Cat a :Animal,
+        :Mammal ;
+    :breathesWithLungs true ;
+    :hasHair true .
+
+:Dog a :Animal,
+        :Predator ;
+    :eatsMeat true .
+
+:Fox a :Animal,
+        :Predator ;
+    :eatsMeat true .
+
+:breathesWithLungs a rdf:Property ;
+    rdfs:domain :Animal ;
+    rdfs:range xsd:boolean .
+
+:eatsMeat a rdf:Property ;
+    rdfs:domain :Animal ;
+    rdfs:range xsd:boolean .
+
+:hasHair a rdf:Property ;
+    rdfs:domain :Animal ;
+    rdfs:range xsd:boolean .
+
