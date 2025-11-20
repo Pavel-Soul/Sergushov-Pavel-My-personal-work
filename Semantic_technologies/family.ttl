@@ -1,0 +1,73 @@
+@prefix fam: <http://www.semanticweb.org/family#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fam:Emma a fam:Female,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:hasParent fam:John,
+        fam:Mary .
+
+fam:Lisa a fam:Female,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:hasParent fam:Peter .
+
+fam:Tom a fam:Male,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:hasParent fam:Peter .
+
+fam:hasChild a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:hasFatherInLaw a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:hasGrandparent a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:hasParent a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:hasSibling a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:hasUncleAunt a owl:ObjectProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:isMarriedTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:domain fam:Person ;
+    rdfs:range fam:Person .
+
+fam:Peter a fam:Male,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:hasParent fam:John,
+        fam:Mary .
+
+fam:Female a owl:Class ;
+    rdfs:subClassOf fam:Person .
+
+fam:John a fam:Male,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:isMarriedTo fam:Mary .
+
+fam:Male a owl:Class ;
+    rdfs:subClassOf fam:Person .
+
+fam:Mary a fam:Female,
+        fam:Person,
+        owl:NamedIndividual ;
+    fam:isMarriedTo fam:John .
+
+fam:Person a owl:Class .
+
